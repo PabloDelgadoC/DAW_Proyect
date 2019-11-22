@@ -1,57 +1,56 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>AngularGlobalImpressions</title>
+    <title>Global Impressions</title>
     <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image" href="#">
 
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/iconic/css/material-design-iconic-font.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/linearicons-v1.0.0/icon-font.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="./assets/animate/animate.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css-hamburgers/hamburgers.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/animsition/css/animsition.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/select2/select2.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="./assets/daterangepicker/daterangepicker.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="./assets/MagnificPopup/magnific-popup.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="./assets/perfect-scrollbar/perfect-scrollbar.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="assets/util.css">
-    <link rel="stylesheet" type="text/css" href="assets/main.css">
+    <link rel="stylesheet" type="text/css" href="./assets/util.css">
+    <link rel="stylesheet" type="text/css" href="./assets/main.css">
     <!--INTROJS.CSS===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/intro.js-2.9.3/introjs.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/intro.js-2.9.3/introjs-modern.css">
+    <link rel="stylesheet" type="text/css" href="./assets/intro.js-2.9.3/introjs.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/intro.js-2.9.3/introjs-modern.css">
   </head>
   <body>
 
     <app-root></app-root>
 
-    <script type="text/javascript"src="vendor/intro.js-2.9.3/intro.min.js"></script>
+    <script type="text/javascript"src="./assets/intro.js-2.9.3/intro.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./assets/jquery/jquery-3.2.1.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <script src="./assets/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/bootstrap/js/popper.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  	<script src="./assets/bootstrap-js/popper.js"></script>
+  	<script src="./assets/bootstrap-js/bootstrap.min.js"></script>
     <!--===============================================================================================-->
-    <script src="vendor/select2/select2.min.js"></script>
+    <script src="./assets/select2/select2.min.js"></script>
     <script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -60,89 +59,89 @@
 			});
 		})
 	</script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/slick/slick.min.js"></script>
-	<script src="js/slick-custom.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/parallax100/parallax100.js"></script>
-	<script>
-        $('.parallax100').parallax100();
-	</script>
-<!--===============================================================================================-->
-	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
-	<script>
-		$('.gallery-lb').each(function() { // the containers for all your galleries
-			$(this).magnificPopup({
-		        delegate: 'a', // the selector for gallery item
-		        type: 'image',
-		        gallery: {
-		        	enabled:true
-		        },
-		        mainClass: 'mfp-fade'
-		    });
-		});
-	</script>
-<!--===============================================================================================-->
-	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/sweetalert/sweetalert.min.js"></script>
-	<script>
-		$('.js-addwish-b2').on('click', function(e){
-			e.preventDefault();
-		});
+  <!--===============================================================================================-->
+  	<script src="./assets/daterangepicker/moment.min.js"></script>
+  	<script src="./assets/daterangepicker/daterangepicker.js"></script>
+  <!--===============================================================================================-->
+  	<script src="./assets/slick/slick.min.js"></script>
+  	<script src="./assets/js/slick-custom.js"></script>
+  <!--===============================================================================================-->
+  	<script src="./assets/parallax100/parallax100.js"></script>
+  	<script>
+          $('.parallax100').parallax100();
+  	</script>
+  <!--===============================================================================================-->
+  	<script src="./assets/MagnificPopup/jquery.magnific-popup.min.js"></script>
+  	<script>
+  		$('.gallery-lb').each(function() { // the containers for all your galleries
+  			$(this).magnificPopup({
+  		        delegate: 'a', // the selector for gallery item
+  		        type: 'image',
+  		        gallery: {
+  		        	enabled:true
+  		        },
+  		        mainClass: 'mfp-fade'
+  		    });
+  		});
+  	</script>
+  <!--===============================================================================================-->
+  	<script src="./assets/isotope/isotope.pkgd.min.js"></script>
+  <!--===============================================================================================-->
+  	<script src="./assets/sweetalert/sweetalert.min.js"></script>
+  	<script>
+  		$('.js-addwish-b2').on('click', function(e){
+  			e.preventDefault();
+  		});
 
-		$('.js-addwish-b2').each(function(){
-			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
+  		$('.js-addwish-b2').each(function(){
+  			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+  			$(this).on('click', function(){
+  				swal(nameProduct, "is added to wishlist !", "success");
 
-				$(this).addClass('js-addedwish-b2');
-				$(this).off('click');
-			});
-		});
+  				$(this).addClass('js-addedwish-b2');
+  				$(this).off('click');
+  			});
+  		});
 
-		$('.js-addwish-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+  		$('.js-addwish-detail').each(function(){
+  			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
+  			$(this).on('click', function(){
+  				swal(nameProduct, "is added to wishlist !", "success");
 
-				$(this).addClass('js-addedwish-detail');
-				$(this).off('click');
-			});
-		});
+  				$(this).addClass('js-addedwish-detail');
+  				$(this).off('click');
+  			});
+  		});
 
-		/*---------------------------------------------*/
+  		/*---------------------------------------------*/
 
-		$('.js-addcart-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to cart !", "success");
-			});
-		});
+  		$('.js-addcart-detail').each(function(){
+  			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
+  			$(this).on('click', function(){
+  				swal(nameProduct, "is added to cart !", "success");
+  			});
+  		});
 
-	</script>
-<!--===============================================================================================-->
-	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-	<script>
-		$('.js-pscroll').each(function(){
-			$(this).css('position','relative');
-			$(this).css('overflow','hidden');
-			var ps = new PerfectScrollbar(this, {
-				wheelSpeed: 1,
-				scrollingThreshold: 1000,
-				wheelPropagation: false,
-			});
+  	</script>
+  <!--===============================================================================================-->
+  	<script src="./assets/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+  	<script>
+  		$('.js-pscroll').each(function(){
+  			$(this).css('position','relative');
+  			$(this).css('overflow','hidden');
+  			var ps = new PerfectScrollbar(this, {
+  				wheelSpeed: 1,
+  				scrollingThreshold: 1000,
+  				wheelPropagation: false,
+  			});
 
-			$(window).on('resize', function(){
-				ps.update();
-			})
-		});
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
+  			$(window).on('resize', function(){
+  				ps.update();
+  			})
+  		});
+  	</script>
+  <!--===============================================================================================-->
+  	<script src="./assets/js/main.js"></script>
   </body>
 </html>
