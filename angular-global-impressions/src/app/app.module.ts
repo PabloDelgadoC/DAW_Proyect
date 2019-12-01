@@ -10,6 +10,8 @@ import { TeamDevelopmentComponent } from './secundarias/team-development/team-de
 import { ContactComponent } from './secundarias/contact/contact.component';
 import { AboutComponent } from './secundarias/about/about.component';
 import { ProductsComponent } from './secundarias/products/products.component';
+import { NewsComponent } from './secundarias/news/news.component';
+import { Page404Component } from './secundarias/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductsComponent } from './secundarias/products/products.component';
     TeamDevelopmentComponent,
     ContactComponent,
     AboutComponent,
-    ProductsComponent
+    ProductsComponent,
+    NewsComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

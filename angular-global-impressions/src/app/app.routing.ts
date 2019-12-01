@@ -8,6 +8,8 @@ import { AboutComponent } from './secundarias/about/about.component';
 import { ContactComponent } from './secundarias/contact/contact.component';
 import { ProductsComponent } from './secundarias/products/products.component';
 import { TeamDevelopmentComponent } from './secundarias/team-development/team-development.component';
+import { NewsComponent } from './secundarias/news/news.component';
+import { Page404Component } from './secundarias/page404/page404.component';
 
 const appRoutes: Routes = [
   {path: 'Inicio', component: MainComponent},
@@ -15,7 +17,8 @@ const appRoutes: Routes = [
   {path: 'Productos', component: ProductsComponent},
   {path: 'Contactanos', component: ContactComponent},
   {path: 'Desarrolladores', component: TeamDevelopmentComponent},
-  {path: '**', component: MainComponent} // SE DEBE CAMBIAR POR EL COMPONENTE PAGE404
+  {path: 'Noticias', component: NewsComponent},
+  {path: '**', component: Page404Component} // SE DEBE CAMBIAR POR EL COMPONENTE PAGE404
 ];
 
 export const appRoutingProviders: any[] = [];
