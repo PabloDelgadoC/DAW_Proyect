@@ -2,33 +2,6 @@
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<!--
-			<div class="top-bar">
-				<div class="content-topbar flex-sb-m h-full container">
-					<div class="left-top-bar">
-						Free shipping for standard order over $100
-					</div>
-
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							Help & FAQs
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							My Account
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							EN
-						</a>
-
-						<a href="#" class="flex-c-m trans-04 p-lr-25">
-							USD
-						</a>
-					</div>
-				</div>
-			</div>
-			-->
 			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop container">
 
@@ -47,11 +20,6 @@
 							<li>
 								<a [routerLink]="['Productos']" [routerLinkActive]="['active-menu']" data-step="2" data-intro="En esta sección podras ver todo el stock que tenemos para ti">Catálogo</a>
 							</li>
-						<!--
-							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.html">Features</a>
-							</li>
-						-->
 
 							<li>
 								<a [routerLink]="['SobreNosotros']" [routerLinkActive]="['active-menu']" data-step="3" data-intro="En está sección econtrarás nuestra información">Sobre Nosotros</a>
@@ -84,6 +52,10 @@
 						<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify="0">
 							<i class="zmdi zmdi-favorite-outline" data-step="8" data-intro="Aquí almacnarás tus artículos favoritos"></i>
 						</a>
+
+						<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+							<button id="iniciarSesion" class="zmdi fs-16" type="button" data-step="8" data-intro="Aquí podrás acceder a tu cuenta">Iniciar Sesión</button>
+						</div>
 					</div>
 				</nav>
 			</div>
@@ -124,27 +96,27 @@
 		<div class="menu-mobile">
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.html">Inicio</a>
+					<a [routerLink]="['Inicio']" [routerLinkActive]="['active-menu']">Inicio</a>
 				</li>
 
 				<li>
-					<a href="product.html">Catálogo</a>
-				</li>
-				<!--
-				<li>
-					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
-				</li>
-				-->
-				<li>
-					<a href="about.html">Sobre Nosotros</a>
+					<a [routerLink]="['Productos']" [routerLinkActive]="['active-menu']">Catálogo</a>
 				</li>
 
 				<li>
-					<a href="contact.html">Contactanos</a>
+					<a [routerLink]="['SobreNosotros']" [routerLinkActive]="['active-menu']">Sobre Nosotros</a>
+				</li>
+
+				<li>
+					<a [routerLink]="['Contactanos']" [routerLinkActive]="['active-menu']">Contactanos</a>
         </li>
 
 				<li>
-					<a href="team-development.html">Desarrolladores</a>
+					<a [routerLink]="['Noticias']" [routerLinkActive]="['active-menu']">Noticias</a>
+				</li>
+
+				<li>
+					<a [routerLink]="['Desarrolladores']" [routerLinkActive]="['active-menu']">Desarrolladores</a>
 				</li>
 			</ul>
 		</div>

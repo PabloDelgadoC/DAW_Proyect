@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-/*@import '~bootstrap/dist/js/bootstrap.bundle.js';*/
-/*@import '~bootstrap/dist/js/bootstrap.min.js';*/
+
+#iniciarSesion{
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: #333;
+}
+
+#iniciarSesion:hover{
+  color: #6c7ae0;
+}

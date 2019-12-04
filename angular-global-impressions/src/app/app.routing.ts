@@ -12,6 +12,7 @@ import { NewsComponent } from './secundarias/news/news.component';
 import { Page404Component } from './secundarias/page404/page404.component';
 
 const appRoutes: Routes = [
+  {path: '', component: MainComponent},
   {path: 'Inicio', component: MainComponent},
   {path: 'SobreNosotros', component: AboutComponent},
   {path: 'Productos', component: ProductsComponent},
