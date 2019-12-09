@@ -26,16 +26,20 @@
                         Nos encontramos ubicados en:<br>
                         C.C. Malecon 2000 galeria D18.<br>
                         Para ventas al por mayor:<br>
-                        Cdla. Alborada 12ava etapa frente al C.C. City Mall o llamanos al (+593) 99 996 3300.
+                        Cdla. Alborada 12ava etapa, Av. Orellana y Benjamín Carrión o llámanos al (+593) 99 996 3300.
                     </p>
                 </div>
             </div>
 
             <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
                 <div class="how-bor1 ">
-                    <div class="hov-img0">
-                        <img src="assets/icons/Direcciones.png" alt="IMG">
-                    </div>
+                    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoseLocation($event)">
+                        <agm-marker
+                          [latitude]="latitude"
+                          [longitude]="longitude"
+                          *ngIf="locationChosen">
+                        </agm-marker>
+                    </agm-map>
                 </div>
             </div>
         </div>
@@ -48,7 +52,7 @@
                     </h3>
 
                     <p class="stext-113 cl6 p-b-26">
-                        Ofrecer a la comunidad Ecuatoriana estampados de última generación además de brindar personalización en vinyl textil, xpress print, sublimación, entre otras.
+                        Ofrecer a la comunidad Ecuatoriana estampados de última generación, además de brindar personalización en vinyl textil, xpress print, sublimación, entre otras.
                     </p>
 
                     <div class="bor16 p-l-29 p-b-9 m-t-22">
