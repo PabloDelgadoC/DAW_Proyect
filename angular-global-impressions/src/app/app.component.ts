@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as introJs from 'intro.js/intro.js';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-global-impressions';
+
+  constructor() {
+  }
+
+  ngOnInit() {
+    introJs().start();
+  }
 }

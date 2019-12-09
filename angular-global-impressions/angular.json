@@ -26,9 +26,12 @@
             "styles": [
               "src/styles.css",
               "src/assets/util.css",
-              "src/assets/main.css"
+              "src/assets/main.css",
+              "node_modules/intro.js/introjs.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/intro.js/intro.js"
+            ]
           },
           "configurations": {
             "production": {
