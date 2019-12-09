@@ -28,7 +28,7 @@ export class Productos {
     
     renderizarPlantilla():string {
       return `
-          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item women">
+          <div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item ${this.tipo}">
 					<!-- Block2 -->
 					<div class="block2">
 						<div class="block2-pic hov-img0">
@@ -46,7 +46,7 @@ export class Productos {
 								</a>
 
 								<span class="stext-105 cl3">
-									${this.precio}
+									$${this.precio.toPrecision(4)}
 								</span>
 							</div>
 
