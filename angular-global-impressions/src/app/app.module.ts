@@ -31,7 +31,7 @@ import { Page404Component } from './secundarias/page404/page404.component';
     BrowserModule,
     routing,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA3jd636bBrRo6a8IZ5LnHtKpjE1aFnmQM'
+      apiKey: 'AIzaSyDr7jwLB9HYmrqZnEYX6nGwkilDaXAc10g'
     })
   ],
   providers: [
