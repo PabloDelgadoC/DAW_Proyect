@@ -34,7 +34,18 @@
 				</div>
 
 				<div class="size-210 bor10 flex-w flex-col-m w-full-md">
-					<div class="size-303" id="google_map" data-map-x="-2.137348" data-map-y="-79.906381" data-pin="./assets/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="14"></div>
+						<agm-map 
+						[latitude]="lat" 
+						[longitude]="lng"
+						[fitBounds]="true">
+						<agm-marker       
+							*ngFor="let m of markers"
+							[latitude]="m.lat"
+							[longitude]="m.lng"
+							[label]="m.label"
+							[agmFitBounds]="true">
+							</agm-marker> 
+						</agm-map>
 				</div>
 			</div>
 		</div>
