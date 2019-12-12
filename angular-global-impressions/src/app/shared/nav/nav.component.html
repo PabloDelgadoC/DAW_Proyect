@@ -85,16 +85,18 @@
 			</div>
 
 			<!-- Button show menu -->
-			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-				<span class="hamburger-box">
-					<span class="hamburger-inner"></span>
-				</span>
+			<div [ngClass]="{'is-active': bandera}" class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<button (click)="toggleNavBar()" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
 			</div>
 		</div>
 
 
 		<!-- Menu Mobile -->
-		<div class="menu-mobile">
+		<div [ngClass]="{'show': navbarOpen}" class="menu-mobile">
 			<ul class="main-menu-m">
 				<li>
 					<a [routerLink]="['Inicio']" [routerLinkActive]="['active-menu']">Inicio</a>

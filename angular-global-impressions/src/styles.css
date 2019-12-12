@@ -10,3 +10,7 @@
 #iniciarSesion:hover{
   color: #6c7ae0;
 }
+
+.show {
+  display: block !important;
+}
