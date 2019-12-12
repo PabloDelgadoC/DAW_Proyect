@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, ActivatedRoute, Params } from '@angular/router';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
@@ -10,7 +10,8 @@ export class NavComponent implements OnInit {
   navbarOpen = false;
   bandera = false;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
   }
@@ -19,5 +20,7 @@ export class NavComponent implements OnInit {
     this.navbarOpen = !this.navbarOpen;
     this.bandera = !this.bandera;
   }
-
+  // redirigir(){
+  //   this.router.navigate(['/Dashboard'])
+  // }
 }

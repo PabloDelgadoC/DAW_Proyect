@@ -9,6 +9,7 @@ import { ContactComponent } from './secundarias/contact/contact.component';
 import { ProductsComponent } from './secundarias/products/products.component';
 import { TeamDevelopmentComponent } from './secundarias/team-development/team-development.component';
 import { NewsComponent } from './secundarias/news/news.component';
+// import { DashboardComponent } from '../../dashboardadmin/src/app/app.component';
 import { Page404Component } from './secundarias/page404/page404.component';
 
 const appRoutes: Routes = [
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   {path: 'Contactanos', component: ContactComponent},
   {path: 'Desarrolladores', component: TeamDevelopmentComponent},
   {path: 'Noticias', component: NewsComponent},
+  // {path: 'Dashboard', component: DashboardComponent},
   {path: '**', component: Page404Component} // SE DEBE CAMBIAR POR EL COMPONENTE PAGE404
 ];
 
