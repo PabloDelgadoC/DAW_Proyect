@@ -107,15 +107,19 @@ export class ProductsComponent implements OnInit {
   }
 
   buscar() {
-    let texto = document.getElementById("txtBuscador");
+    //let tag:HTMLElement = document.getElementById("txtBuscador");
+    var tag = (<HTMLInputElement>document.getElementById("txtBuscador")).value;
+    let texto:string = tag.toLocaleLowerCase();
+    console.log(texto)
     $("#products").empty();
     fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
       .then(response => response.json())
       .then(data => {
         let arreglo = data;
-
         for (let objeto of arreglo) {
-          if (objeto["tipo"] == "bag") {
+          let detalle:string=objeto["detalle"].toLocaleLowerCase()
+          if (detalle.lastIndexOf(texto) !=-1) {
+            console.log(texto)
             let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
             document.getElementById("products").innerHTML += producto.renderizarPlantilla()
           }
