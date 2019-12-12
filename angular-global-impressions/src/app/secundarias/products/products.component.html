@@ -31,10 +31,10 @@
 				</div>
 
 				<div class="flex-w flex-c-m m-tb-10">
-					<div [ngClass]="{'show-filter': bandera}"class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter" (click)='filtrar()'>
+					<div [ngClass]="{'show-filter': bandera}" class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter" (click)='filtrar()'>
 						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"  ></i>
 						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none" ></i>
-							Filtrar
+							<button id='btn-filtrar' (click)='filtrar()' type="button">Filtrar</button>
 					</div>
 
 					<div [ngClass]="{'show-search': divBuscar}" class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search" (click)='habilitarBuscar()'>
@@ -52,7 +52,7 @@
 						</button>
 						<form id="form1">
 							<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" id= "txtBuscador" name="search-product" placeholder="Buscar">
-						</form>	
+						</form>
 					</div>
 				</div>
 
@@ -215,7 +215,7 @@
 				</div>
 			</div>
 			<div id="products" class="row isotope-grid">
-			
+
 			</div>
 		</div>
 	</div>

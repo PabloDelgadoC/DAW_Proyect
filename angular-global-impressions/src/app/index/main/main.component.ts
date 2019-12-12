@@ -9,11 +9,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class MainComponent implements OnInit {
 
-  bandera = false;
-  filtro = false;
-  btnBuscar = false;
-  divBuscar = false;
-
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -37,16 +32,6 @@ export class MainComponent implements OnInit {
 
   redirigir() {
     this.router.navigate(['/Productos']);
-  }
-
-  filtrar() {
-    this.bandera = !this.bandera;
-    this.filtro = !this.filtro;
-  }
-
-  buscar() {
-    this.divBuscar = ! this.divBuscar;
-    this.btnBuscar = !this.btnBuscar;
   }
 
 }

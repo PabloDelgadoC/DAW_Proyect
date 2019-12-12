@@ -134,5 +134,9 @@ export class ProductsComponent implements OnInit {
     this.divBuscar = !this.divBuscar;
     this.btnBuscar = !this.btnBuscar;
   }
-}
 
+  filtrar() {
+    this.bandera = !this.bandera;
+    this.filtro = !this.filtro;
+  }
+}
