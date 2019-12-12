@@ -2,35 +2,89 @@
     <div class="container-fluid">
         <div class="card">
             <div class="header">
-                <h4 class="title">Mensajes de contacto</h4>
-                <p class="category">Se han contactado con ud.</p>
+                <h4 class="title">Mensajeria</h4>
+                <p class="category">Mensajes de contacto</p>
             </div>
             <div class="content">
                 <div class="row">
                     <div class="col-md-6">
-                        <h5>Mensajes</h5>
-                        <!-- <div class="alert alert-info">
-                            <span>Mensaje de negocio1.</span>
-                        </div>
-                        <div class="alert alert-info">
-                            <button type="button" aria-hidden="true" class="close">×</button>
-                            <span>Mensaje de negocio2.</span>
-                        </div> -->
-                        <div class="alert alert-info" data-notify="container">
-                            <button type="button" aria-hidden="true" class="close">×</button>
-                            <span data-notify="icon" class="pe-7s-bell"></span>
-                            <span data-notify="message">Mensaje de negocio1.</span>
-                        </div>
-                        <div class="alert alert-info" data-notify="container">
-                            <button type="button" aria-hidden="true" class="close">×</button>
-                            <span data-notify="icon" class="pe-7s-bell"></span>
-                            <span data-notify="message">Mensaje de negocio2.</span>
-                        </div>
-                        <!-- <div class="alert alert-info" data-notify="container">
-                            <button type="button" aria-hidden="true" class="close">×</button>
-                            <span data-notify="icon" class="pe-7s-bell"></span>
-                            <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
-                        </div> -->
+                        <h5>Contesta tus mensajes</h5>
+                        <!-- Vertical Steppers -->
+<div class="row mt-1">
+        <div class="col-md-12">
+      
+          <!-- Stepers Wrapper -->
+          <ul class="stepper stepper-vertical">
+      
+            <!-- First Step -->
+            <li class="completed">
+              <a href="#!">
+                <span class="circle">1</span>
+                <span class="label">Revisa todos los mensajes</span>
+              </a>
+              <div class="step-content alert alert-info" data-notify="container">
+                    <button type="button" aria-hidden="true" class="close">×</button>
+                    <span data-notify="icon" class="pe-7s-bell"></span>
+                    <span data-notify="message">Mensaje de negocio1.</span>
+                </div>
+                <div class="step-content alert alert-info" data-notify="container">
+                    <button type="button" aria-hidden="true" class="close">×</button>
+                    <span data-notify="icon" class="pe-7s-bell"></span>
+                    <span data-notify="message">Mensaje de negocio2.</span>
+                </div>
+            </li>
+      
+            <!-- Second Step -->
+            <li class="active">
+                    <a href="#!">
+                      <span class="circle">2</span>
+                      <span class="label">Responda a los mensajes</span>
+                    </a>
+            </li>
+      
+            <!-- Third Step -->
+            
+            <li class="warning">
+              <a href="#!">
+                <span class="circle"><i class="fas fa-exclamation"></i></span>
+                <span class="label">Verifique sus credenciales</span>
+              </a>
+              <div class="step-content">
+                    <div class="md-form ml-auto">
+                        <input id="email-parallel" name="email" type="email" class="form-control validate" required>
+                        <label for="email-parallel">E-mail</label>
+                    </div>
+                    <div class="md-form ml-auto">
+                            <input id="email-parallel" name="email" type="email" class="form-control validate" required>
+                            <label for="email-parallel">Contraseña</label>
+                    </div>
+                    <div class="step-actions">
+                            <button class="text-dark bg-light waves-effect waves-dark btn btn-sm btn-primary next-step" data-feedback="validationFunction">CONTINUAR</button>
+                            <button class="text-dark bg-white waves-effect waves-dark btn btn-sm btn-secondary previous-step">ATRÁS</button>
+                    </div>
+              </div>
+            </li>
+      
+            <!-- Fourth Step -->
+            <li>
+              <a href="#!">
+                <span class="circle">4</span>
+                <span class="label">Envié los mensajes</span>
+              </a>
+              <div class="row mt-1">
+                    <div class="col-md-12 text-right">
+                      <button class="text-dark btn btn-flat btn-sm">CANCELAR</button>
+                      <button class="text-dark btn btn-primary btn-sm">CONTINUAR</button>
+                    </div>
+                </div>
+            </li>
+      
+          </ul>
+          <!-- /.Stepers Wrapper -->
+      
+        </div>
+      </div>
+      <!-- /.Vertical Steppers -->
                     </div>
                     <div class="col-md-6">
                         <h5>Estado del mensaje</h5>
@@ -52,39 +106,6 @@
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                <!-- <div class="places-buttons">
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3 text-center">
-                            <h5>Notifications Places
-                                <p class="category">Click to view notifications</p>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-md-offset-2">
-                            <button class="btn btn-default btn-block" (click)="showNotification('top','left')">Top Left</button>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-default btn-block" (click)="showNotification('top','center')">Top Center</button>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-default btn-block" (click)="showNotification('top','right')">Top Right</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3 col-md-offset-2">
-                            <button class="btn btn-default btn-block" (click)="showNotification('bottom','left')">Bottom Left</button>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-default btn-block" (click)="showNotification('bottom','center')">Bottom Center</button>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-default btn-block" (click)="showNotification('bottom','right')">Bottom Right</button>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
