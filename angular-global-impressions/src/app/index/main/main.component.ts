@@ -11,6 +11,8 @@ export class MainComponent implements OnInit {
 
   bandera = false;
   filtro = false;
+  btnBuscar = false;
+  divBuscar = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -40,6 +42,11 @@ export class MainComponent implements OnInit {
   filtrar() {
     this.bandera = !this.bandera;
     this.filtro = !this.filtro;
+  }
+
+  buscar() {
+    this.divBuscar = ! this.divBuscar;
+    this.btnBuscar = !this.btnBuscar;
   }
 
 }
