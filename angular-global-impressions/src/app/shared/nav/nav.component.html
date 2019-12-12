@@ -7,7 +7,7 @@
 				<nav class="limiter-menu-desktop container">
 
 					<!-- Logo desktop -->
-					<a href="index.html" class="logo">
+					<a [routerLink]="['/']" class="logo">
 						<img src="./assets/GI-logo.png" alt="IMG-LOGO">
 					</a>
 
@@ -15,27 +15,27 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a [routerLink]="['Inicio']" [routerLinkActive]="['active-menu']" data-step="1" data-intro="Esta es la página principal donde encontrarás lo más relevante de nuestro stock">Inicio</a>
+								<a [routerLink]="['/Inicio']" [routerLinkActive]="['active-menu']" data-step="1" data-intro="Esta es la página principal donde encontrarás lo más relevante de nuestro stock">Inicio</a>
 							</li>
 
 							<li>
-								<a [routerLink]="['Productos']" [routerLinkActive]="['active-menu']" data-step="2" data-intro="En esta sección podras ver todo el stock que tenemos para ti">Catálogo</a>
+								<a [routerLink]="['/Productos']" [routerLinkActive]="['active-menu']" data-step="2" data-intro="En esta sección podras ver todo el stock que tenemos para ti">Catálogo</a>
 							</li>
 
 							<li>
-								<a [routerLink]="['SobreNosotros']" [routerLinkActive]="['active-menu']" data-step="3" data-intro="En está sección econtrarás nuestra información">Sobre Nosotros</a>
+								<a [routerLink]="['/SobreNosotros']" [routerLinkActive]="['active-menu']" data-step="3" data-intro="En está sección econtrarás nuestra información">Sobre Nosotros</a>
 							</li>
 
 							<li>
-								<a [routerLink]="['Contactanos']" [routerLinkActive]="['active-menu']" data-step="4" data-intro="En esta sección podrás encontrar nuestra ubicación">Contáctanos</a>
+								<a [routerLink]="['/Contactanos']" [routerLinkActive]="['active-menu']" data-step="4" data-intro="En esta sección podrás encontrar nuestra ubicación">Contáctanos</a>
 							</li>
 
 							<li>
-								<a [routerLink]="['Noticias']" [routerLinkActive]="['active-menu']" data-step="5" data-intro="En esta sección podrás encontrar promociones y más">Noticias</a>
+								<a [routerLink]="['/Noticias']" [routerLinkActive]="['active-menu']" data-step="5" data-intro="En esta sección podrás encontrar promociones y más">Noticias</a>
 							</li>
 
 							<li>
-								<a [routerLink]="['Desarrolladores']" [routerLinkActive]="['active-menu']" data-step="6" data-intro="En esta sección encontrarás a las personas que desarrollaron está aplicación">Desarrolladores</a>
+								<a [routerLink]="['/Desarrolladores']" [routerLinkActive]="['active-menu']" data-step="6" data-intro="En esta sección encontrarás a las personas que desarrollaron está aplicación">Desarrolladores</a>
 							</li>
 						</ul>
 					</div>
