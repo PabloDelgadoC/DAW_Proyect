@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Productos } from "../../../Productos";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-products',
@@ -7,6 +8,11 @@ import { Productos } from "../../../Productos";
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  bandera = false;
+  filtro = false;
+  btnBuscar = false;
+  divBuscar = false;
+
 
   constructor() { }
 
@@ -21,9 +27,20 @@ export class ProductsComponent implements OnInit {
       document.getElementById("products").innerHTML += producto.renderizarPlantilla()
   }
 })
-.catch(function(error) {
-  console.log('Hubo un problema con la petición Fetch:' + error.message);
-});
+  .catch(function(error) {
+    console.log('Hubo un problema con la petición Fetch:' + error.message);
+  });
   }
 
+   filtrar() {
+    this.bandera = !this.bandera;
+    this.filtro = !this.filtro;
+  }
+
+
+  buscar() {
+    this.divBuscar = ! this.divBuscar;
+    this.btnBuscar = !this.btnBuscar;
+  }
 }
+  
