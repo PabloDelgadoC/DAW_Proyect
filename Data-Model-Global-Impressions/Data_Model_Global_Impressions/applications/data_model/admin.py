@@ -9,17 +9,18 @@ class UsuarioAdmin(admin.ModelAdmin):
     list_display = (
     'id',
     'user',
-    'password'
+    'password',
+    'empleadoFK',
+    'rolFK'
     )
 
     search_fields = ('user',)
 
 class EmpleadoAdmin(admin.ModelAdmin):
     list_display = (
-    'id',
+    'cedula',
     'nombres',
     'apellidos',
-    'cedula',
     'telefono'
     )
 
@@ -43,7 +44,7 @@ class ProductoAdmin(admin.ModelAdmin):
 
     search_fields = ('imagePath',)
 
-class TipoAdmin(admin.ModelAdmin):
+class TipoProductoAdmin(admin.ModelAdmin):
     list_display = (
     'tipo',
     'descripcion',
@@ -59,6 +60,7 @@ class ReaccionAdmin(admin.ModelAdmin):
 
 class LocalAdmin(admin.ModelAdmin):
     list_display = (
+    'tipoLocalFK',
     'nombreLocal',
     'direccion',
     'latitud',
@@ -70,9 +72,7 @@ class LocalAdmin(admin.ModelAdmin):
 
 class TipoLocalAdmin(admin.ModelAdmin):
     list_display = (
-    'local',
-    'mayorista',
-    'minorista'
+    'local'
     )
 
     search_fields = ('local',)
