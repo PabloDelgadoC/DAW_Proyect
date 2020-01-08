@@ -25,7 +25,11 @@ git log
 git push origin master
 ```
 ## TASKS:
-[x] Idea de proyecto :+1
-[x] Creación del repositorio y archivos :+1
-[] Realización del mockup
-[] Inicio del proyecto
+[x] Idea de proyecto
+[x] Creación del repositorio y archivos
+[x] Realización del mockup
+[x] Inicio del proyecto
+[X] Cambiar la plantilla con nuestro proyecto
+[x] Pasar el proyecto al framework Angular
+[X] Realizar el modelo de datos con Django
+[] Realizar el API con Express

@@ -13,23 +13,15 @@ class Empleado(models.Model):
     apellidos = models.CharField('Apellidos', blank=True, max_length=50, help_text='Ej: Castro Fernandez')
     cedula = models.PositiveIntegerField('Cedula', primary_key=True, blank=True, help_text='Ej: 0123456789')
     telefono = models.PositiveSmallIntegerField('Telefono', help_text='Ej: 0987654321')
+    rol = models.CharField('Rol', blank=True, max_length=35, help_text='Ej: Vendedor|Cliente')
 
     def __str__(self):
         return self.nombres
-
-class Rol(models.Model):
-    #idRol = models.AutoField(primary_key=True)
-    rol = models.CharField('Rol', blank=True, max_length=30)
-    descripcion = models.TextField('Descripcion')
-
-    def __str__(self):
-        return self.rol
 
 class Usuario(models.Model):
     user = models.CharField('User', blank=True, max_length=30)
     paswword = models.CharField('Password', blank=True, max_length=20)
     empleadoFK = models.ForeignKey(Empleado, on_delete=models.CASCADE)
-    rolFK = models.ForeignKey(Rol, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.user
@@ -42,14 +34,6 @@ class TipoProducto(models.Model):
     def __str__(self):
         return self.tipo
 
-class Reaccion(models.Model):
-    #idReaccion = models.AutoField(primary_key=True)
-    vistas = models.PositiveIntegerField('Vistas')
-    likes = models.PositiveIntegerField('Likes')
-
-    def __str__(self):
-        return self.vistas
-
 class Producto(models.Model):
     userFK = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     imagePath = models.ImageField('Imagen', blank=True)
@@ -57,13 +41,13 @@ class Producto(models.Model):
     detalle = models.CharField('Detalle', max_length=80)
     descripcion = models.TextField('Descripcion')
     tipoProductoFK = models.ForeignKey(TipoProducto, on_delete=models.CASCADE)
-    reaccionFK = models.ForeignKey(Reaccion, on_delete=models.CASCADE)
+    vistas = models.PositiveIntegerField('Vistas')
+    likes = models.PositiveIntegerField('Likes')
 
     def __str__(self):
         return self.imagePath
 
 class TipoLocal(models.Model):
-    #idTipoLocal = models.AutoField(primary_key=True)
     local = models.CharField('TipoLocal', max_length=50)
 
     def __str__(self):
