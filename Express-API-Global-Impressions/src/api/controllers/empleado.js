@@ -29,18 +29,36 @@ empleadoController.crear =(req,res,next)=>{
   });
 }
 empleadoController.listarById =(req,res,next)=>{
-  EmpleadoModel.listarById( (err, data) => {
+  const cedulaEmpleado=req.params.id
+  EmpleadoModel.listarById( cedulaEmpleado,(err, data) => {
     res.json(data);
   });
 }
 empleadoController.actualizar =(req,res,next)=>{
-  EmpleadoModel.actualizar( (err, data) => {
-    res.json(data);
+  const objetoEmpleado={
+    cedula: req.params.id,
+    nombres: req.body.nombres,
+    apellidos: req.body.apellidos,
+    telefono: req.body.telefono,
+    idLocal: req.body.idLocal,
+    rol: req.body.rol
+  }
+  EmpleadoModel.actualizar( objetoEmpleado,(err, data) => {
+    if(data && data.msg){
+      res.json(data);
+    }else{
+      res.json({'sucess': false, 'msg:': 'error'});
+  }
   });
 }
-empleadoController.borrar = (req, res, next) => {
-  EmpleadoModel.borrar( (err, data) => {
-    res.json(data);
+empleadoController.borrar = (req, res) => {
+  const cedulaEmpleado=req.params.id
+  EmpleadoModel.borrar( cedulaEmpleado,(err, data) => {
+    if(data && data.msg ==='deleted' || data.msg === 'no exists'){
+      res.json({sucess: true,data});
+  }else{
+      res.json({'msg':'err'});
+  }
   });
 }
 
