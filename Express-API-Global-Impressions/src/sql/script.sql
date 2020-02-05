@@ -1,5 +1,17 @@
 USE globalimpressions;
 
+/*
+DELETE FROM Producto;
+DELETE FROM Usuario;
+DELETE FROM EmpleadoLocal;
+DELETE FROM Empleado;
+DELETE FROM Local;
+DELETE FROM TipoProducto;
+DELETE FROM TipoLocal;
+*/
+
+
+
 
 INSERT INTO TipoLocal(idTipoLocal, Local)
 VALUES (1, "Mayorista");
@@ -62,4 +74,5 @@ INSERT INTO Producto(idProducto,imagePath,precio,detalle,idAutor,descripcion,idT
 VALUES (4,"assets/productos/gorras/guayaquil.jpg",10.72,"Gorra Guayaquil",1,"",1,0);
 
 INSERT INTO Producto(idProducto,imagePath,precio,detalle,idAutor,descripcion,idTipoProducto,likes)
-VALUES (5,"assets/productos/hombres/joker.png",25.50,"Camiseta Joker",1,"",1,0);
+VALUES (5,"assets/productos/hombres/joker.png",25.50,"Camiseta Joker",1,"",3,0);
+

@@ -18,31 +18,32 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
+    fetch('http://localhost:3000/productos')
       .then(response => response.json())
       .then(data => {
+        //console.log(data);
         let arreglo = data;
 
         for (let objeto of arreglo) {
-          let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
+          let producto: Productos = new Productos(objeto["detalle"], objeto["idTipoPrducto"], objeto["precio"], objeto["imagePath"])
           document.getElementById("products").innerHTML += producto.renderizarPlantilla()
         }
       })
       .catch(function (error) {
-        console.log('Hubo un problema con la petición Fetch:' + error.message);
+        console.log('Hubo un problema con la petición:' + error.message);
       });
   }
 
   filtrarMujer() {
     $("#products").empty();
-    fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
+    fetch('http://localhost:3000/productos')
       .then(response => response.json())
       .then(data => {
         let arreglo = data;
 
         for (let objeto of arreglo) {
-          if (objeto["tipo"] == "women") {
-            let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
+          if (objeto["idTipoProducto"] == 2) {
+            let producto: Productos = new Productos(objeto["detalle"], objeto["idTipoProducto"], objeto["precio"], objeto["imagePath"])
             document.getElementById("products").innerHTML += producto.renderizarPlantilla()
           }
         }
@@ -54,14 +55,14 @@ export class ProductsComponent implements OnInit {
 
   filtrarHombre() {
     $("#products").empty();
-    fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
+    fetch('http://localhost:3000/productos')
       .then(response => response.json())
       .then(data => {
         let arreglo = data;
 
         for (let objeto of arreglo) {
-          if (objeto["tipo"] == "men") {
-            let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
+          if (objeto["idTipoProducto"] == 3) {
+            let producto: Productos = new Productos(objeto["detalle"], objeto["idTipoProducto"], objeto["precio"], objeto["imagePath"])
             document.getElementById("products").innerHTML += producto.renderizarPlantilla()
           }
         }
@@ -73,14 +74,14 @@ export class ProductsComponent implements OnInit {
 
   filtrarGorras() {
     $("#products").empty();
-    fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
+    fetch('http://localhost:3000/productos')
       .then(response => response.json())
       .then(data => {
         let arreglo = data;
 
         for (let objeto of arreglo) {
-          if (objeto["tipo"] == "bag") {
-            let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
+          if (objeto["idTipoProducto"] == 1) {
+            let producto: Productos = new Productos(objeto["detalle"], objeto["idTipoProducto"], objeto["precio"], objeto["imagePath"])
             document.getElementById("products").innerHTML += producto.renderizarPlantilla()
           }
         }
@@ -92,12 +93,12 @@ export class ProductsComponent implements OnInit {
 
   filtrarTodos() {
     $("#products").empty();
-    fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
+    fetch('http://localhost:3000/productos')
       .then(response => response.json())
       .then(data => {
         let arreglo = data;
         for (let objeto of arreglo) {
-          let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
+          let producto: Productos = new Productos(objeto["detalle"], objeto["idTipoProducto"], objeto["precio"], objeto["imagePath"])
           document.getElementById("products").innerHTML += producto.renderizarPlantilla()
         }
       })
@@ -112,7 +113,7 @@ export class ProductsComponent implements OnInit {
     let texto:string = tag.toLocaleLowerCase();
     console.log(texto)
     $("#products").empty();
-    fetch('http://my-json-server.typicode.com/leomk1998/testd1/productos')
+    fetch('http://localhost:3000/productos')
       .then(response => response.json())
       .then(data => {
         let arreglo = data;
@@ -120,7 +121,7 @@ export class ProductsComponent implements OnInit {
           let detalle:string=objeto["detalle"].toLocaleLowerCase()
           if (detalle.lastIndexOf(texto) !=-1) {
             console.log(texto)
-            let producto: Productos = new Productos(objeto["detalle"], objeto["tipo"], objeto["precio"], objeto["image_path"])
+            let producto: Productos = new Productos(objeto["detalle"], objeto["idTipoProducto"], objeto["precio"], objeto["imagePath"])
             document.getElementById("products").innerHTML += producto.renderizarPlantilla()
           }
         }

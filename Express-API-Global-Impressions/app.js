@@ -4,6 +4,11 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+var cors = require('cors')
+
+
+
+
 
 const { mongoose } = require('./dbMongo');
 const { mysql } = require('./dbMysql');
@@ -24,6 +29,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended:false})); //true en caso de imágenes
+app.use(cors())
+
+
 
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
@@ -35,6 +43,7 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -45,5 +54,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
