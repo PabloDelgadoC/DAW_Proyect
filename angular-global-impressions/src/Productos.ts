@@ -1,30 +1,30 @@
 export class Productos {
 
     private _detalle: string;
-    private _tipo: string;
+    private _idTipoProducto: number;
     private _precio: number;
-    private _image_path: string;
+    private _imagePath: string;
 
 
     
-    constructor(_detalle:string, _tipo:string, _precio:number, _image_path:string){
+    constructor(_detalle:string, _idTipoProducto:number, _precio:number, _image_path:string){
         this._detalle = _detalle;
-        this._tipo = _tipo;
+        this._idTipoProducto = _idTipoProducto;
         this._precio = _precio;
-        this._image_path = _image_path;
+        this._imagePath = _image_path;
     }
   
     set detalle(_detalle:string) {this._detalle = _detalle;}
     get detalle() {return this._detalle;}
   
-    set tipo(_tipo:string) {this._tipo = _tipo;}
-    get tipo() {return this._tipo;}
+    set tipo(_tipo:number) {this._idTipoProducto = _tipo;}
+    get tipo() {return this._idTipoProducto;}
 
     set precio(_precio:number) {this._precio = _precio;}
     get precio() {return this._precio;}
   
-    set image_path(_image_path:string) {this._image_path = _image_path;}
-    get image_path() {return this._image_path;}
+    set imagePath(_image_path:string) {this._imagePath = _image_path;}
+    get imagePath() {return this._imagePath;}
     
     renderizarPlantilla():string {
       return `
@@ -32,7 +32,7 @@ export class Productos {
 					<!-- Block2 -->
 					<div class="block2">
 						<div class="block2-pic hov-img0">
-							<img src="${this.image_path}" alt="IMG-PRODUCT">
+							<img src="${this.imagePath}" alt="IMG-PRODUCT">
 
 							
 						</div>
