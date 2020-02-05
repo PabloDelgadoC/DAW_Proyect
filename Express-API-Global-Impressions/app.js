@@ -12,6 +12,7 @@ const { mysql } = require('./dbMysql');
 // var usersRouter = require('./routes/users');
 const historicoRouter = require('./src/api/routes/historico');
 const productoRouter = require('./src/api/routes/productos');
+const empleadoRouter = require('./src/api/routes/empleado');
 const app = express();
 
 // view engine setup
@@ -28,6 +29,7 @@ app.use(bodyParser.urlencoded({extended:false})); //true en caso de imágenes
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/historico', historicoRouter);
+app.use('/empleado', empleadoRouter);
 app.use('/productos', productoRouter);
 
 // catch 404 and forward to error handler
