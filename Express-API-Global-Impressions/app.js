@@ -7,9 +7,6 @@ const bodyParser = require('body-parser');
 var cors = require('cors')
 
 
-
-
-
 const { mongoose } = require('./dbMongo');
 const { mysql } = require('./dbMysql');
 
@@ -19,6 +16,7 @@ const historicoRouter = require('./src/api/routes/historico');
 const productoRouter = require('./src/api/routes/productos');
 const empleadoRouter = require('./src/api/routes/empleado');
 const localRouter = require('./src/api/routes/local');
+const usuarioRouter = require('./src/api/routes/usuarios');
 const app = express();
 
 // view engine setup
@@ -34,13 +32,13 @@ app.use(bodyParser.urlencoded({extended:false})); //true en caso de imágenes
 app.use(cors())
 
 
-
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 app.use('/historico', historicoRouter);
 app.use('/empleado', empleadoRouter);
 app.use('/productos', productoRouter);
 app.use('/local', localRouter);
+app.use('/usuarios', usuarioRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

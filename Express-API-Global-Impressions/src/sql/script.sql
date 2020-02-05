@@ -59,7 +59,7 @@ INSERT INTO Usuario(idUsuario,usuario,contraseña,idEmpleado)
 VALUES (1,"dianaaa",AES_ENCRYPT('dianaaaa','123'),"130000001");
 
 INSERT INTO Usuario(idUsuario,usuario,contraseña,idEmpleado)
-VALUES (2,"luissal",AES_ENCRYPT('lucho123','123'),"130000001");
+VALUES (2,"luissal",AES_ENCRYPT('lucho123','123'),"130000002");
 
 INSERT INTO Producto(idProducto,imagePath,precio,detalle,idAutor,descripcion,idTipoProducto,likes)
 VALUES (1,"assets/productos/mujeres/joker.jpg",16.64,"Camiseta Joker",1,"",2,0);
@@ -75,4 +75,3 @@ VALUES (4,"assets/productos/gorras/guayaquil.jpg",10.72,"Gorra Guayaquil",1,"",1
 
 INSERT INTO Producto(idProducto,imagePath,precio,detalle,idAutor,descripcion,idTipoProducto,likes)
 VALUES (5,"assets/productos/hombres/joker.png",25.50,"Camiseta Joker",1,"",3,0);
-
