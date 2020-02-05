@@ -56,7 +56,6 @@ CREATE TABLE Producto(
   idAutor INT,
   descripcion TEXT,
   idTipoProducto INT,
-  vistas INT,
   likes INT,
   FOREIGN KEY(idAutor) REFERENCES Usuario(idUsuario),
   FOREIGN KEY(idTipoProducto) REFERENCES TipoProducto(idTipoProducto)

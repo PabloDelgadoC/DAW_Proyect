@@ -6,7 +6,6 @@ const HistoricoSchema = new mongoose.Schema({
   imagen: String,
   precio: Number,
   descripcion: String,
-  vistas: Number,
   likes: Number
 });
 

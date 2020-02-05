@@ -13,6 +13,10 @@ ProductoModel.listar = callback => {
   }
 }
 
-
+// ProductModel.insertar = (producto, callback) => {
+//   if (connection) {
+//     // connection.query('INSERT INTO Producto');
+//   }
+// }
 
 module.exports = ProductoModel
