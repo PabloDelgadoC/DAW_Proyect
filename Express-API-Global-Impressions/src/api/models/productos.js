@@ -32,9 +32,7 @@ ProductoModel.crear = (producto, callback) => {
     connection.query(query, producto, (error, result) => {
       if(error){ throw error;}
       else{
-        callback(null, {
-          'detalle': result.id
-        });
+        callback(null, result);
       }
     });
   }

@@ -28,7 +28,7 @@ productController.crear = (req, res, next) => {
     likes: req.body.likes
   }
   ProductoModel.crear(producto, (error, data) => {
-    if(data && data.insertId){
+    if(data) {
       console.log(producto);
       res.status(200).json({
         sucess: true,
