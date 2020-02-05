@@ -53,7 +53,7 @@ EmpleadoModel.actualizar = (objetoEmpleado,callback) => {
 }
 EmpleadoModel.borrar = (cedulaEmpleado,callback) => {
   if (connection){
-    let sql = `DELETE * FROM Empleado WHERE cedula=${cedulaEmpleado}`
+    let sql = `SELECT * FROM Empleado WHERE cedula=${cedulaEmpleado}`
     connection.query(sql, (err,row)=>{
       if(row){
           let sql =`DELETE FROM Empleado WHERE cedula=${cedulaEmpleado}`;

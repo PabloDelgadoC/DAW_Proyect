@@ -54,7 +54,7 @@ empleadoController.actualizar =(req,res,next)=>{
 empleadoController.borrar = (req, res) => {
   const cedulaEmpleado=req.params.id
   EmpleadoModel.borrar( cedulaEmpleado,(err, data) => {
-    if(data && data.msg ==='deleted' || data.msg === 'no exists'){
+    if(data){
       res.json({sucess: true,data});
   }else{
       res.json({'msg':'err'});
