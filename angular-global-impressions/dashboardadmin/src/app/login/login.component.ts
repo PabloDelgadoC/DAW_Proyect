@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { AuthService } from '../services/auth.service';
 import { UserInterface } from '../models/user-interface';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -14,7 +14,7 @@ import { NgForm } from '@angular/forms/src/directives/ng_form';
 export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router, private location: Location) { }
   private user: UserInterface = {
-    email: '',
+    user: '',
     password: ''
   };
   public isError = false;
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   onLogin(form: NgForm) {
     if (form.valid) {
       return this.authService
-        .loginuser(this.user.email, this.user.password)
+        .loginuser(this.user.user, this.user.password)
         .subscribe(
         data => {
           this.authService.setUser(data.user);
