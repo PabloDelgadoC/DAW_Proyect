@@ -14,7 +14,7 @@ const historicoController = {
 
   },
 
-  borrar: (req, res, next) => {
+  actualizar: (req, res, next) => {
 
   },
 
