@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const URI = 'mongodb://localhost:27017/globalImpressions';
+const URI = 'mongodb://localhost:27017/globalImpeeressions';
 
 mongoose.Promise = global.Promise;
 
