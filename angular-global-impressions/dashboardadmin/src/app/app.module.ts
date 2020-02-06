@@ -12,9 +12,12 @@ import { SidebarModule } from './sidebar/sidebar.module';
 import { AppComponent } from './app.component';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './usuario/login/login.component';
+import { PerfilComponent } from './usuario/perfil/perfil.component';
+import { RegistroComponent } from './usuario/registro/registro.component';
+import { UsuarioNoRegistradoComponent } from './usuario-no-registrado/usuario-no-registrado.component';
+import { NewLoginComponent } from './new-login/new-login.component';
 
-// import { LineChartComponent } from './line-chart/line-chart.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -24,13 +27,16 @@ import { LoginComponent } from './login/login.component';
     NavbarModule,
     FooterModule,
     SidebarModule,
-    // LineChartComponent,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilComponent,
+    RegistroComponent,
+    UsuarioNoRegistradoComponent,
+    NewLoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
