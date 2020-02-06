@@ -39,18 +39,18 @@ ProductoModel.crear = (producto, callback) => {
 }
 
 ProductoModel.actualizar = (producto, callback) => {
+  const query = `
+  UPDATE Producto SET
+  imagePath = ${connection.escape(producto.imagePath)},
+  precio = ${connection.escape(producto.precio)},
+  detalle = ${connection.escape(producto.detalle)},
+  idAutor = ${connection.escape(producto.idAutor)},
+  descripcion = ${connection.escape(producto.descripcion)},
+  idTipoProducto = ${connection.escape(producto.idTipoProducto)},
+  likes = ${connection.escape(producto.likes)}
+  WHERE idProducto = ${connection.escape(producto.idProducto)}
+  `;
   if(connection) {
-    const query = `
-      UPDATE Producto SET
-      imagePath = ${connection.escape(producto.imagePath)},
-      precio = ${connection.escape(producto.precio)},
-      detalle = ${connection.escape(producto.detalle)},
-      idAutor = ${connection.escape(producto.idAutor)},
-      descripcion = ${connection.escape(producto.descripcion)},
-      idTipoProducto = ${connection.escape(producto.idTipoProducto)},
-      likes = ${connection.escape(producto.likes)}
-      WHERE idProducto = ${connection.escape(producto.idProducto)}
-    `;
     connection.query(query, (error, result) => {
       if(error){ throw error;}
       else{

@@ -1,6 +1,6 @@
 USE globalimpressions;
 
-/*
+
 DELETE FROM Producto;
 DELETE FROM Usuario;
 DELETE FROM EmpleadoLocal;
@@ -8,7 +8,7 @@ DELETE FROM Empleado;
 DELETE FROM Local;
 DELETE FROM TipoProducto;
 DELETE FROM TipoLocal;
-*/
+
 
 
 
@@ -32,10 +32,10 @@ INSERT INTO TipoProducto(idTipoProducto, nombreTipo, descripcion)
 VALUES (3, "Hombre", "Accesorios para hombres");
 
 INSERT INTO Local(idLocal, nombreLocal, direccion,latitud,longitud,telefono,idTipoLocal)
-VALUES (1, "Malecon", "Malecon 2000",1,1,"022222",2);
+VALUES (1, "Malecon", "Malecon 2000",-2.1985391,-79.8809507,"022222",2);
 
 INSERT INTO Local(idLocal, nombreLocal, direccion,latitud,longitud,telefono,idTipoLocal)
-VALUES (2, "Taller", "Alborada 12va etapa",1,1,"022222",1);
+VALUES (2, "Taller", "Alborada 12va etapa",-2.1376476,-79.9063379,"022222",1);
 
 INSERT INTO Empleado(cedula,nombres,apellidos,telefono,idLocal,rol)
 VALUES ("130000000","Fabian", "Vargas","099999999",1,"Guardia");
@@ -59,7 +59,7 @@ INSERT INTO Usuario(idUsuario,usuario,contraseña,idEmpleado)
 VALUES (1,"dianaaa",AES_ENCRYPT('dianaaaa','123'),"130000001");
 
 INSERT INTO Usuario(idUsuario,usuario,contraseña,idEmpleado)
-VALUES (2,"luissal",AES_ENCRYPT('lucho123','123'),"130000001");
+VALUES (2,"luissal",AES_ENCRYPT('lucho123','123'),"130000002");
 
 INSERT INTO Producto(idProducto,imagePath,precio,detalle,idAutor,descripcion,idTipoProducto,likes)
 VALUES (1,"assets/productos/mujeres/joker.jpg",16.64,"Camiseta Joker",1,"",2,0);
@@ -75,4 +75,3 @@ VALUES (4,"assets/productos/gorras/guayaquil.jpg",10.72,"Gorra Guayaquil",1,"",1
 
 INSERT INTO Producto(idProducto,imagePath,precio,detalle,idAutor,descripcion,idTipoProducto,likes)
 VALUES (5,"assets/productos/hombres/joker.png",25.50,"Camiseta Joker",1,"",3,0);
-
