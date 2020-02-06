@@ -26,6 +26,7 @@ export class ContactComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }
 interface marker {
 	lat: number;

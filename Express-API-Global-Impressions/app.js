@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 var cors = require('cors')
 
 
@@ -19,6 +20,7 @@ const historicoRouter = require('./src/api/routes/historico');
 const productoRouter = require('./src/api/routes/productos');
 const empleadoRouter = require('./src/api/routes/empleado');
 const localRouter = require('./src/api/routes/local');
+const sendRouter = require('./src/api/routes/send');
 const app = express();
 
 // view engine setup
@@ -41,6 +43,7 @@ app.use('/historico', historicoRouter);
 app.use('/empleado', empleadoRouter);
 app.use('/productos', productoRouter);
 app.use('/local', localRouter);
+app.use('/send', sendRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
