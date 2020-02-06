@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
 
+// import { LineChartComponent } from './line-chart/line-chart.component';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -23,6 +24,7 @@ import { LoginComponent } from './login/login.component';
     NavbarModule,
     FooterModule,
     SidebarModule,
+    // LineChartComponent,
     AppRoutingModule
   ],
   declarations: [

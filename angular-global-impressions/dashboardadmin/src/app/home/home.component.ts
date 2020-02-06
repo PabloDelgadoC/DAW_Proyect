@@ -105,8 +105,6 @@ export class HomeComponent implements OnInit {
         { title: 'Camisetas estampadas1', imageClass: 'fa fa-circle text-info' },
         { title: 'Busos estampados3', imageClass: 'fa fa-circle text-danger' }
       ];
-
-
     }
 
 }

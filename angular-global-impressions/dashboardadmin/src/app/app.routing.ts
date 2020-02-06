@@ -7,7 +7,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { LoginComponent } from './login/login.component';
 
 
-/*
+
 const routes: Routes =[
   {
     path: '',
@@ -26,17 +26,17 @@ const routes: Routes =[
     redirectTo: 'dashboard'
   }
 ];
-*/
 
-const routes: Routes = [
-  {path: '', component: LoginComponent},
-  {path: 'dashboard', component: AdminLayoutComponent, children: [{
-      path: '',
-      loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
-      }]
-  }
-  // {path: '**', component: LoginComponent}
-];
+
+// const routes: Routes = [
+//   {path: '', component: LoginComponent},
+//   {path: 'dashboard', component: AdminLayoutComponent, children: [{
+//       path: '',
+//       loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+//       }]
+//   }
+//   // {path: '**', component: LoginComponent}
+// ];
 
 
 @NgModule({
