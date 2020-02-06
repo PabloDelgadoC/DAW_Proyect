@@ -9,7 +9,7 @@ sendController.enviar = (req, res) => {
       <li>Nombre: ${req.body.datospersonales}</li>
       <li>Email: ${req.body.email}</li>
     </ul>
-    <h3>Mensage</h3>
+    <h3>Mensaje</h3>
     <p>${req.body.msg}</p>
   `;
     // create reusable transporter object using the default SMTP transport
@@ -42,8 +42,9 @@ sendController.enviar = (req, res) => {
           }
           console.log('Message sent: %s', info.messageId);   
           console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-    
-          res.send(output);
+          
+        res.redirect('http://localhost:4200/Contactanos');
+        //   res.send(output);
       });
   }
 module.exports = sendController;
