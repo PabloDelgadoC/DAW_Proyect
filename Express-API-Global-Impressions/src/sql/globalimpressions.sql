@@ -37,7 +37,7 @@ CREATE TABLE EmpleadoLocal(
 CREATE TABLE Usuario(
   idUsuario INT AUTO_INCREMENT PRIMARY KEY,
   usuario VARCHAR(30),
-  contraseña BLOB,
+  contraseña VARCHAR(20),
   idEmpleado VARCHAR(10),
   FOREIGN KEY(idEmpleado) REFERENCES Empleado(cedula)
 );
