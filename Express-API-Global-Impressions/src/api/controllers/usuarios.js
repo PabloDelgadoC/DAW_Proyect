@@ -73,6 +73,28 @@ const usuarioController = {
         });
       }
     });
+  },
+
+  validacion: async (req, res, next) => {
+    const { user, pass } = req.body;
+    console.log(user);
+    console.log(pass);
+    await UsuarioModel.validar(user, pass, (error, data) => {
+      console.log(user);
+      if(user && pass && data){
+        res.status(200).json({
+          sucess:true,
+          msg: 'Valida',
+          data: data
+        });
+      }else{
+        console.log('error');
+        res.status(404).json({
+          sucess: false,
+          msg: error
+        });
+      }
+    });
   }
 
 };

@@ -73,4 +73,16 @@ UsuarioModel.borrarById = (id, callback) => {
   }
 }
 
+UsuarioModel.validar = (user, pass, callback) => {
+  if(connection) {
+    let query = `SELECT ${connection.escape(pass)} FROM Usuario WHERE usuario = ${connection.escape(user)}`;
+    connection.query(query, (error, result) => {
+      if(error) {throw error;}
+      else{
+        callback(null,{'msg':'si'});
+      }
+    });
+  }
+}
+
 module.exports = UsuarioModel

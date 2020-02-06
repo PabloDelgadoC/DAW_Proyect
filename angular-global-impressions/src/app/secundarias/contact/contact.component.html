@@ -9,14 +9,14 @@
 		<div class="container">
 			<div class="flex-w flex-tr">
 				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-					<form>
+					<form method="POST" action="http://localhost:3000/send">
 						<h4 class="mtext-105 cl2 txt-center p-b-30">
 							Envíanos un mensaje
 						</h4>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
 							<label for="datos-personales"></label>
-							<input class="stext-111 cl2 plh3 size-116 p-l-25 p-r-30" type="text" name="datos-personales" placeholder="Escriba su nombre">
+							<input class="stext-111 cl2 plh3 size-116 p-l-25 p-r-30" type="text" name="datospersonales" placeholder="Escriba su nombre">
 						</div>
 
 						<div class="bor8 m-b-20 how-pos4-parent">
@@ -34,7 +34,8 @@
 							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="Sugerencias/Comentarios"></textarea>
 						</div>
 
-						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" 
+						type="submit">
 							Enviar
 						</button>
 					</form>
